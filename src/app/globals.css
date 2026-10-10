@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Motion: chalk-white clinic walls, deep pine for actions, a warm signal yellow
+   reserved for the one thing that is time-critical – a held slot. */
+:root {
+  --chalk: #f2f4f1;
+  --card: #ffffff;
+  --ink: #1c2a25;
+  --muted: #5b6963;
+  --line: #d3dad5;
+  --pine: #24624f;
+  --pine-ink: #ffffff;
+  --mint: #dcebe4;
+  --signal: #e9b949;
+  --danger: #b3392f;
+  --success: #24624f;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --chalk: #111815;
+    --card: #19221e;
+    --ink: #e5ede9;
+    --muted: #9cada5;
+    --line: #2d3a35;
+    --pine: #72c3a6;
+    --pine-ink: #0d1613;
+    --mint: #1d3a30;
+    --signal: #f0c75e;
+    --danger: #ff8f84;
+    --success: #72c3a6;
+  }
+}
+
+@theme inline {
+  --color-chalk: var(--chalk);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-pine: var(--pine);
+  --color-pine-ink: var(--pine-ink);
+  --color-mint: var(--mint);
+  --color-signal: var(--signal);
+  --color-danger: var(--danger);
+  --color-success: var(--success);
+  --font-sans: "Hanken Grotesk Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  background: var(--chalk);
+  color: var(--ink);
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

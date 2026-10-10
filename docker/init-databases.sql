@@ -1,0 +1,2 @@
+CREATE DATABASE physio_test;
+CREATE DATABASE physio_e2e;
